@@ -82,7 +82,22 @@
   white-space: nowrap;
 }
 
+@mixin black-links {
+  @include link-unstyle;
+  padding: 17px 35px;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $grayish-dark-blue;
+  border: 1px solid $grayish-dark-blue;
+  transition: all 0.2s ease-in-out;
 
+  &:hover{
+      background-color: $grayish-dark-blue;
+      color: #fff;
+  }
+}
 
 
 

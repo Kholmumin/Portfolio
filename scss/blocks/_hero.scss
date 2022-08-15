@@ -1,0 +1,118 @@
+.hero{
+    padding-bottom: 150px;
+}
+.hero__all{
+    padding-top: 335px;
+    background-image: url("../images/hero-mobile.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@include bgRetinaImages{
+    .hero__all{
+        background-image: url("../images/hero-mobile@2x.png"); 
+    }
+}
+
+.hero__box{
+    padding-bottom: 96px;
+    background-color: #fff;
+}
+
+.hero__title{
+    font-family: 'Ibarra Real Nova';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    letter-spacing: -0.357143px;
+    color: $grayish-dark-blue;
+}
+
+.hero__about{
+    position: relative;
+    padding: 17px 50px;
+    padding-left: 70px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: $dark-Blue;
+    @include link-unstyle;
+    background-image: url("../images/btn-green.svg");
+    background-repeat: no-repeat;
+    transition: all 0.2s ease-in-out;
+    
+    &:hover{
+        background-image: url("../images/btn-white.svg");
+        background-color: $slightly-Cyan;
+    }
+}
+
+@include mobile-first(426px){
+    .hero__all{
+        padding-top: 400px;
+    }
+}
+
+
+@include mobile-first(538px){
+    .hero__all{
+        padding-top: 450px;
+    }
+
+    .hero__box{
+        max-width: 514px;
+    }
+}
+
+@include mobile-first(600px){
+    .hero__all{
+        padding-top: 550px;
+    }   
+}
+
+@include mobile-first(700px){
+    .hero__all{
+        background-image: url("../images/hero-tablet.png");
+    }   
+}
+
+@include bgRetinaImages{
+    .hero__all{
+        background-image: url("../images/hero-tablet@2x.png");
+    }  
+}
+
+@include mobile-first(768px){
+    .hero__all{
+        padding-top: 330px;
+        background-size: cover;
+    }   
+
+    .hero__box{
+        padding-top: 17px;
+    }
+
+    .hero__title{
+        margin-bottom: 48px;
+    }
+}
+
+@include mobile-first(800px){
+    .hero__all{
+        padding-top: 238px;
+        background-position: center;
+        background-image: url("../images/hero-destkop.png");
+    }   
+    .hero__box{
+        max-width: 445px;
+    }
+
+    @include bgRetinaImages{
+        .hero__all{
+            background-image: url("../images/hero-destkop@2x.png");
+        }
+    }
+}
