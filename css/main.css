@@ -352,6 +352,7 @@ template {
 }
 
 html {
+  scroll-behavior: smooth;
   height: 100%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -440,8 +441,10 @@ body {
   position: absolute;
   top: 84px;
   right: 30px;
+  max-width: 340px;
   padding: 40px 55px;
   background-color: #33323D;
+  z-index: 10;
   -webkit-animation: menu 1s ease-in-out;
           animation: menu 1s ease-in-out;
 }
@@ -519,9 +522,11 @@ body {
   .nav {
     display: block;
     position: static;
+    padding: 0;
     background-color: transparent;
     -webkit-animation: none;
             animation: none;
+    max-width: none;
   }
   .nav__list {
     -webkit-box-orient: horizontal;
@@ -652,7 +657,7 @@ body {
   }
 }
 .touch__box {
-  padding-bottom: 32px;
+  padding: 32px 0;
   border-top: 1px solid #DCDCDE;
   border-bottom: 1px solid #DCDCDE;
 }
@@ -688,6 +693,9 @@ body {
 }
 
 @media only screen and (min-width: 1024px) {
+  .touch {
+    padding: 94px 0;
+  }
   .touch__box {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -695,7 +703,6 @@ body {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    padding-top: 48px;
   }
 }
 .contact {
@@ -844,6 +851,7 @@ body {
 @media only screen and (min-width: 1024px) {
   .contact__box {
     padding-top: 47px;
+    padding-bottom: 109px;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr 1fr;

@@ -14,8 +14,10 @@
     position: absolute;
     top: 84px;
     right: 30px;
+    max-width: 340px;
     padding: 40px 55px;
     background-color: $grayish-dark-blue;
+    z-index: 10;
     animation: menu 1s ease-in-out;
 }
 
@@ -75,9 +77,10 @@
     .nav{
         display: block;
         position: static;
+        padding: 0;
         background-color: transparent;
         animation: none;
-        
+        max-width: none;
     }
 
     .nav__list{

@@ -97,6 +97,7 @@
 @include mobile-first(1024px){
     .contact__box{
         padding-top: 47px;
+        padding-bottom: 109px;
         display: grid;
         grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
